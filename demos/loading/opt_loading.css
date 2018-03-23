@@ -1,0 +1,138 @@
+  * {
+      margin: 0px;
+      padding: 0;
+  }
+
+  #wrap {
+      height: 100px;
+      width: 100px;
+      position: relative;
+      margin: 100px auto;
+  }
+
+  #small {
+      height: 60px;
+      width: 60px;
+      position: relative;
+      top: -80px;
+      left: 20px;
+      z-index: 4;
+  }
+
+  #run {
+      height: 100px;
+      width: 100px;
+      position: relative;
+      opacity: 0;
+      animation: cir 1s infinite linear;
+  }
+
+  @keyframes cir {
+      0% {
+          transform: rotate(0deg);
+          opacity: 0;
+      }
+      100% {
+          transform: rotate(-360deg);
+          opacity: 1;
+      }
+  }
+
+  #r {
+      height: 60px;
+      width: 30px;
+      border-radius:0  30px 30px 0 ;
+      background: #f24;
+      z-index: 7;
+      left:30px;
+      position: absolute;
+      
+      transform-origin: left center;
+      animation: r 1s infinite linear;
+  }
+
+  #l {
+      height: 60px;
+      width: 30px;
+      border-radius:0  30px 30px 0 ;
+      background: #f99;
+      z-index: 7;
+      left: 30px;
+      position: absolute;
+       transform-origin: left center;
+      animation: l 1s infinite linear;
+  }
+      @keyframes r {
+        0% {
+            transform: rotate(0deg);
+        }
+        25% {
+        
+            transform: rotate(-180deg);
+        }
+        50% {
+            transform: rotate(-180deg);
+            z-index:  8;
+        }
+        75% {
+            transform: rotate(-360deg);
+            z-index:  8;
+        }
+        100% {
+            transform: rotate(-360deg);
+        }
+    }
+    @keyframes l {
+        0% {
+            transform: rotate(0deg);
+        }
+        25% {
+            transform: rotate(0deg);
+        }
+        50% {
+            transform: rotate(-180deg);
+            z-index: 6; 
+        }
+        75% {
+            transform: rotate(-180deg);
+            z-index: 8; 
+        }
+        100% {
+            transform: rotate(-360deg);
+             z-index:  8;
+        }
+    }
+  #arc {
+      height: 50px;
+      width: 50px;
+      background-color: #fff;
+      position: absolute;
+      z-index: 2;
+  }
+
+  #circular {
+      height: 98px;
+      width: 98px;
+      border-radius: 50%;
+      border: 2px solid #f24;
+      position: absolute;
+      z-index: 1;
+  }
+
+  #rou {
+      height: 60px;
+      width: 30px;
+       border-radius: 30px 0px 0 30px;
+      background-color: #f99;
+      position: absolute;
+      z-index: 4;
+  }
+   #rou1 {
+      height: 60px;
+      width: 30px;
+       border-radius:  0px 30px 30px 0;
+      background-color: #f24;
+      position: absolute;
+      z-index: 4;
+      left:30px;
+  }

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>倒计时</title>
+    <style type="text/css">
+    .Countdown {
+        width: 200px;
+        height: 40px;
+        background-color: #333;
+        border-radius: 4px;
+    }
+
+    .Countdown span {
+        color: #f00;
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    h1,.input,
+    .Countdown {
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    input {
+        height: 24px;
+        width: 80px;
+        /*border: none;*/
+        outline: none;
+        border-radius: 8px;
+        border: 2px solid green;
+        text-align: center;
+    }
+
+    .btn {
+        width: 40px;
+        height: 24px;
+        background: green;
+        color: white;
+    }
+    </style>
+</head>
+
+<body>
+	<h1>简易倒计时器</h1>
+    <div class="input">
+        <input type="text" placeholder="输入时">
+        <input type="text" placeholder="输入分">
+        <input type="text" placeholder="输入秒">
+        <input type="button" value="OK" class="btn">
+    </div>
+    <div class="Countdown">
+        <span class="zero_h">0</span>
+        <span class="hour">0</span>
+        <span class="dot">:</span>
+        <span class="zero_m">0</span>
+        <span class="min">0</span>
+        <span class="dot">:</span>
+        <span class="zero_s">0</span>
+        <span class="sec">0</span>
+    </div>
+    <script>
+    /* 倒计时思路：1小时=60分钟=3600秒，用定时器控制
+        	 秒数减到0后，若分针不为0则分针减1,秒针设置为59.分针减到0后，若时针不为0，则时针减一，把分针，秒针设置为59*/
+    //扩展选择器
+    function qS(classname) {
+        return document.querySelector('.' + classname);
+    }
+
+    // list是元素列表，例如document.getElementsByTagName('input')
+    function getValue(list) { //获取input输入的定时时间
+        var len = list.length;
+        var arrValue = [];
+        for (ele of list) {
+            arrValue.push(ele.value);
+        }
+        return arrValue;
+    }
+
+    //获取元素内文本信息
+    function getInnerText(list) {
+        var text = [];
+        for (ele of list) {
+            text.push(ele.innerText);
+        }
+        return text;
+    }
+    //设置文本信息
+    function setInnerText(list, text) {
+        var l_list = list.length,
+            l_text = text.length;
+        if (l_text != l_list) {
+            throw '参数长度不一致';
+        } else {
+            for (let i = 0; i < l_list; i++) {
+                list[i].innerText = text[i];
+            }
+        }
+    }
+    var t = null,
+        sec = qS('sec'),
+        min = qS('min'),
+        hour = qS('hour'),
+        z_h = qS('zero_h'),
+        z_m = qS('zero_m'),
+        z_s = qS('zero_s'),
+        btn = qS('btn');
+    btn.addEventListener('click', handle);
+
+    //btn点击事件处理函数
+    function handle() {
+        var inList = document.getElementsByTagName('input'),
+            h = 0,
+            m = 0,
+            s = 0;
+        // h = inList[0].value == '' ? 0 : inList[0].value,
+        // m = inList[1].value == '' ? 0 : inList[1].value,
+        // s = inList[2].value == '' ? 0 : inList[2].value;
+        //以上注释掉的三句用函数封装了，getValue（）代替
+        [h, m, s] = getValue(inList);
+        h = h == '' ? 0 : h;
+        m = m == '' ? 0 : m;
+        s = s == '' ? 0 : s;
+        setInnerText([z_h, z_m, z_s], [(h > 10) ? '' : '0', (m > 10) ? '' : '0', (s > 10) ? '' : '0']);
+        if (parseInt(h) < 25 && parseInt(m) < 60 && parseInt(s) < 60) { //全部是有效数值
+            // sec.innerText = s;
+            // min.innerText = m;
+            // hour.innerText = h;这三句用setInnerText()代替
+            setInnerText([hour, min, sec], [h, m, s]);
+
+            t = setInterval(function() {
+                let sec_t = '',
+                    min_t = '',
+                    hour_t = '';
+               
+                [hour_t, min_t, sec_t] = getInnerText([hour, min, sec]);
+
+                if (sec_t > 0) {
+                   
+                    setInnerText([z_s, sec], [(sec_t > 10) ? '' : '0', --sec_t]);
+                } else if (min_t > 0) {
+                   
+                    setInnerText([z_m, sec, z_s, min], [(min_t > 10) ? '' : '0', 59, '', --min_t]);
+                } else if (hour_t > 0) {
+                    
+                    setInnerText([z_h, sec, min, z_s, z_m, hour], [(hour_t > 10) ? '' : '0', 59, 59, '', '', --hour.innerText]);
+                } else {
+                    clearInterval(t);
+                    t = null;
+                }
+            }, 1000);
+        } else {
+            throw '输入非法,请输入数字';
+        }
+    }
+    </script>
+</body>
+
+</html>

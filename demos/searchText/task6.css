@@ -1,0 +1,30 @@
+.span,#textarea,#input,#check{
+	display: block;
+	margin-top:10px;
+}
+textarea{
+	display: inline-block;
+	height: 200px;
+	width:400px;
+}
+#check{
+	background: #fff;
+	border: none;
+	border: 1px solid #aaa;
+}
+#textarea:hover,#input:hover{
+	border: none;
+	border:1px solid #80f0ff;
+}
+#check:hover{
+	background: #fc0000;
+	color: #fff;
+}
+#out{
+	height: 200px;
+	width:400px;
+	border: 1px solid #aaa;
+	display:none;
+	margin-top:10px;
+	font-size: 26px;
+}

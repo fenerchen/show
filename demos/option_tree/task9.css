@@ -1,0 +1,48 @@
+body{
+	margin: 0;
+}
+#tree_{
+	height: 164px;
+	width: 804px;
+	margin: 0px auto;
+	margin-top:100px;
+	border: none;
+}
+#root{
+	height: 160px;
+	width: 800px;
+	border: 2px solid;
+	background-color: #fff;
+	border-radius: 6px;
+}
+div{
+	display: flex;
+	width: 20%;
+	height: 70%;
+	border: 2px solid;
+	border-radius: 6px;
+	align-items:center;
+	justify-content:space-around;
+	background-color: #fff;
+	cursor:pointer;
+}
+#butt{
+	height: 30px;
+	width: 800px;
+	border-radius: 6px;
+	margin: 10px auto;
+	display: flex;
+	border: none;
+}
+button{
+	flex: 3 40px;
+	height: 30px;
+	border-radius:6px;
+	background: #00bb00;
+	color:#fff;
+	cursor:pointer;
+}
+button:nth-of-type(3),button:nth-of-type(4),button:nth-of-type(5){
+	flex: 1 40px;
+	margin-left:20px; 	
+}
