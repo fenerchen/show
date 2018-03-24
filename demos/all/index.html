@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>陈祥芬_西安电子科技大学硕士研究生_部分作品展示</title>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <style>
+    * {
+        margin: 0;
+    }
+
+    body {
+        background-image: url('img/bj.png');
+        background-repeat: repeat;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav_header {
+        display: flex;
+        height: 120px;
+        background-color: #aad2f0;
+        justify-content: space-around;
+        align-items: center;
+        position: sticky;
+        top: -2px;
+        z-index: 999;
+    }
+
+    .projects,
+    .rewards {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border: 2px solid green;
+        height: 98px;
+        width: 160px;
+        color: #f00000;
+        text-shadow: 4px 4px 4px #999;
+    }
+
+    .projects_show,
+    .rewards_show {
+        display: flex;
+        flex-flow: row wrap;
+        margin: 10px;
+        justify-content: center;
+    }
+
+    a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        color: #fff;
+        /*text-align: center;*/
+        display: flex;
+        vertical-align: center;
+    }
+
+    .intro {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: #666;
+        opacity: 0;
+        border-radius: 20px;
+    }
+
+    .intro>p {
+        display: flex;
+        justify-content: center;
+    }
+
+    .photo {
+        background-image: url("img/m3.jpg");
+        background-size: 115px 206px;
+        background-position: -0px -16px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        /*flex:1;*/
+    }
+
+    .photo:hover {
+        background-image: url("img/m2.jpg");
+        background-size: 104px 180px;
+        background-position: -10px -10px;
+    }
+
+
+    .projects:hover,
+    .rewards:hover {
+        background-color: green;
+        color: white;
+    }
+
+    .projects {
+        border-radius: 40px 0 40px 0;
+    }
+
+    .rewards {
+        border-radius: 0px 40px 0px 40px;
+    }
+
+    .box {
+        /*background: #cc2;*/
+        width: 320px;
+        border: 1px solid #0a0;
+        border-radius: 20px;
+        box-shadow: #ccc 10px 10px 10px 8px;
+        height: 480px;
+        /*background: transparent;*/
+        background-position: center;
+        margin: 20px 40px;
+        background-color: #ffe;
+        background-repeat: no-repeat;
+    }
+
+    .box1 {
+        background-image: url("img/loading.gif");
+    }
+
+    .box2 {
+
+        background-image: url("img/3D.gif");
+    }
+
+    .box3 {
+        background-image: url("img/word.gif");
+    }
+
+    .box4 {
+        background-image: url("img/instuction.gif");
+    }
+
+    .box5 {
+        background-image: url("img/tree.gif");
+    }
+
+    .box6 {
+        background-image: url("img/query.gif");
+        background-position: -20px;
+    }
+
+    .box9 {
+        background-image: url("img/mooc.png");
+    }
+
+    .box8 {
+        background-image: url('img/page.png');
+    }
+
+    .box7 {
+        background-image: url('img/timer.gif');
+    }
+
+    .box10 {
+        background-image: url('img/shirt.png');
+    }
+
+    .box11 {
+        background-image: url("img/comp3.jpg");
+    }
+
+    .box12 {
+
+        background-image: url("img/comp4.jpg");
+    }
+
+    .box13 {
+        background-image: url("img/comp2.jpg");
+    }
+
+    .box14 {
+        background-image: url("img/al.jpg");
+    }
+
+    .box15 {
+        background-image: url("img/math.jpg");
+    }
+
+    .box16 {
+        background-image: url("img/ele.jpg");
+    }
+
+    .box17 {
+        background-image: url("img/ele1.jpg");
+    }
+
+    .box18 {
+        background-image: url('img/lan.jpg');
+    }
+
+    .rewards_box {
+        background-size: 420px 480px;
+    }
+
+    .rewards_box:hover {
+        background-size: 430px 490px;
+    }
+
+    .title {
+        margin-top: 20px;
+    }
+    .intro:hover {
+        opacity: 0.8;
+    }
+
+    #screen {
+        background: #ccc;
+        position: absolute;
+        width: 800px;
+        height: 400px;
+        z-index: 99999;
+        opacity: 0.7;
+        font-size: 20px;
+        text-align: center;
+        line-height: 400px;
+        color: red;
+        left:0;
+        right: 0;
+        top:0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    @media screen and (max-width: 400px) {
+        .projects,
+        .rewards {
+            display: none;
+        }
+        .title {
+            font-size: 26px;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div id="screen">本页面支持Chrome21+、Opera12.1+、Firefox22+、Safari6.1+、IE10+</div>
+    <div class="container">
+        <header class="nav_header">
+            <div class="photo"><a href="https://github.com/fenerchen" target="_blank"></a></div>
+            <h2 class="projects" id="projects">
+			趣味DEMOS
+			
+		</h2>
+            <h2 class="rewards">荣誉证书</h2>
+        </header>
+        <h1 class="title" id="demos">一、趣味DEMOS</h1>
+        <div class="projects_show">
+            <div class="box1 box">
+                <a href="http://htmlpreview.github.io/?https://github.com/fenerchen/show/blob/master/demos/loading/opt_loading.html" target="_blank">
+                    <ul class="intro">
+                        <p>loading加载</p>
+                        描述：使用css3制作动态加载loading
+                    </ul>
+                </a>
+            </div>
+            <div class="box2 box">
+                <a href="http://htmlpreview.github.io/?https://github.com/fenerchen/show/blob/master/demos/3D_rotator/3d_rotator.html" target="_blank">
+                    <ul class="intro">
+                        <p>3D轮播</p>
+                        <li>使用css3制作3D动态轮播器</li>
+                    </ul>
+                </a>
+            </div>
+            <div class="box3 box">
+                <a href="http://htmlpreview.github.io/?https://github.com/fenerchen/show/blob/master/demos/words_animation/w_a.html" target="_blank">
+                    <ul class="intro">
+                        <p>CSS3饼状loading效果</p>
+                        <li>使用HTML和CSS实现半圆和四分之三圆环</li>
+                        <li>longding动画页面上下左右剧中</li>
+                        <li>所有的动画元素采用HTML和CSS实现</li>
+                    </ul>
+                </a>
+            </div>
+            <div class="box4 box">
+                <a href="https://codepen.io/fenerchen/pen/aYwYwZ" target="_blank">
+                    <ul class="intro">
+                        <p>听指令的小方块</p>
+                        <li>小方块根据指令执行动画</li>
+                        <li>每条指令的执行时间是1s</li>
+                    </ul>
+                </a>
+            </div>
+            <div class="box5 box">
+                <a href="https://codepen.io/fenerchen/pen/KoqRZN" target="_blank">
+                    <ul class="intro">
+                        <p>JavaScript和树</p>
+                        <li>先生成一棵树</li>
+                        <li>对这个树进行遍历、插入、删除节点等</li>
+                    </ul>
+                </a>
+            </div>
+            <div class="box6 box">
+                <a href="http://htmlpreview.github.io/?https://github.com/fenerchen/show/blob/master/demos/queue/task5.html" target="_blank">
+                    <ul class="intro">
+                        <p>队列操作</p>
+                        <li>输入数字，模拟入队出队</li>
+                        <li>对队列进行排序</li>
+                    </ul>
+                </a>
+            </div>
+            <div class="box7 box">
+                <a href="http://htmlpreview.github.io/?https://github.com/fenerchen/show/blob/master/demos/Countdowntimer/Simpletimer.html" target="_blank">
+                    <ul class="intro">
+                        <p>倒计时计时器</p>
+                        <li>自行设计定时时间</li>
+                        <li>启动定时器进入倒计时模式</li>
+                    </ul>
+                </a>
+            </div>
+            <div class="box8 box">
+                <a href="http://htmlpreview.github.io/?https://github.com/fenerchen/baiduife/blob/master/task/xiaoweicollege/task7/task7.html" target="_blank">
+                    <ul class="intro">
+                        <p>技术产品官网的页面架构及样式布局</p>
+                        <li>根据PSD实现页面</li>
+                    </ul>
+                </a>
+            </div>
+            <div class="box9 box">
+                <a href="http://htmlpreview.github.io/?https://github.com/fenerchen/imooc/blob/master/firm/firm.html" target="_blank">
+                    <ul class="intro">
+                        <p>慕课网首页</p>
+                        <li>模拟实现慕课网首页</li>
+                    </ul>
+                </a>
+            </div>
+            <div class="box10 box">
+                <a href="http://htmlpreview.github.io/?https://github.com/fenerchen/jqExercise/blob/master/code/shirt.html" target="_blank">
+                    <ul class="intro">
+                        <p>购物网页</p>
+                        <li>查看商品的信息</li>
+                    </ul>
+                </a>
+            </div>
+        </div>
+        <h1 class="title" id="rewards_title">二、荣誉证书</h1>
+        <div class="rewards_show">
+            <div class="box11 box rewards_box">
+                <a href="http://htmlpreview.github.io/?https://github.com/fenerchen/show/blob/master/demos/loading/opt_loading.html" target="_blank">
+                    <div class="intro">
+                        <p>计算机等级四级合格证书</p>
+                    </div>
+                </a>
+            </div>
+            <div class="box12 box rewards_box">
+                <a href="http://htmlpreview.github.io/?https://github.com/fenerchen/show/blob/master/demos/3D_rotator/3d_rotator.html" target="_blank">
+                    <div class="intro">
+                        <p>计算机等级三级合格证书</p>
+                    </div>
+                </a>
+            </div>
+            <div class="box13 box rewards_box">
+                <a href="http://htmlpreview.github.io/?https://github.com/fenerchen/show/blob/master/demos/words_animation/w_a.html" target="_blank">
+                    <div class="intro">
+                        <p>计算机等级二级合格证书</p>
+                    </div>
+                </a>
+            </div>
+            <div class="box14 box rewards_box">
+                <a href="https://codepen.io/fenerchen/pen/aYwYwZ" target="_blank">
+                    <div class="intro">
+                        <p>中兴捧月算法大赛区域优胜奖</p>
+                    </div>
+                </a>
+            </div>
+            <div class="box15 box rewards_box">
+                <a href="https://codepen.io/fenerchen/pen/KoqRZN" target="_blank">
+                    <div class="intro">
+                        <p>苏北数学建模联赛三等奖</p>
+                    </div>
+                </a>
+            </div>
+            <div class="box16 box rewards_box">
+                <a href="http://htmlpreview.github.io/?https://github.com/fenerchen/show/blob/master/demos/queue/task5.html" target="_blank">
+                    <div class="intro">
+                        <p>山东省电子设计竞赛一等奖</p>
+                    </div>
+                </a>
+            </div>
+            <div class="box17 box rewards_box">
+                <a href="http://htmlpreview.github.io/?https://github.com/fenerchen/show/blob/master/demos/Countdowntimer/Simpletimer.html" target="_blank">
+                    <div class="intro">
+                        <p>山东省电子设计竞赛，TI公司颁发二等奖</p>
+                    </div>
+                </a>
+            </div>
+            <div class="box18 box rewards_box">
+                <a href="http://htmlpreview.github.io/?https://github.com/fenerchen/baiduife/blob/master/task/xiaoweicollege/task7/task7.html" target="_blank">
+                    <div class="intro">
+                        <p>蓝桥杯山东赛区二等奖</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+    window.onload = function() {
+        var nav_rew = document.querySelector('.rewards'),
+            tit_rew = document.getElementById('rewards_title'),
+            projects = document.getElementById('projects'),
+            demos = document.getElementById('demos'),
+
+            screen = document.getElementById('screen'),
+            t = null;
+
+     t=setTimeout(function() {
+            screen.style.display = 'none';
+            console.log(1)
+            clearTimeout(t);
+        }, 3000);
+     
+        //监听导航点击事件，滚动条到相应位置
+        nav_rew.addEventListener('click', position);
+        projects.addEventListener('click', position);
+
+        function position(ele) {
+            var y = 0;
+            // console.log(ele.target.className)
+            y = ele.target.className == 'rewards' ? getElementTop(tit_rew) : getElementTop(demos);
+            window.scrollTo(0, y);
+        }
+
+        function getElementTop(ele) { //获取元素偏离页面的高度
+            var actualTop = ele.offsetTop,
+                current = ele.offsetParent;
+            while (current !== null) {
+                actualTop += current.offsetTop;
+                current = current.offsetParent;
+            }
+            return actualTop;
+        }
+    }
+    </script>
+</body>
+
+</html>
