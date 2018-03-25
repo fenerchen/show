@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>陈祥芬_西安电子科技大学_可展示作品集</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: "å¾®è½¯é›…é»‘";
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .header {
+        height: 100px;
+        background-color: #aad2f0;
+        position: sticky;
+        top: -2px;
+        z-index: 999;
+    }
+
+    .mypic {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        overflow: hidden;
+        display: inline-block;
+        margin-left: 80px;
+        background-image: url("img/m3.jpg");
+        background-size: 115px 206px;
+        background-position: -0px -16px;
+    }
+    .mypic:hover {
+        background-image: url("img/m2.jpg");
+        background-size: 104px 180px;
+        background-position: -10px -10px;
+    }
+    .nav {
+        float: right;
+        margin-right: 80px;
+    }
+
+    .projects {
+        border-radius: 40px 0 40px 0;
+        margin-right: 60px;
+    }
+
+    .rewards {
+        border-radius: 0px 40px 0px 40px;
+    }
+    .projects,
+    .rewards {
+        display: inline-block;
+        border: 2px solid green;
+        height: 90px;
+        width: 160px;
+        color: #f00000;
+        text-shadow: 4px 4px 4px #999;
+        font-weight: bold;
+        font-size: 26px;
+        text-align: center;
+        line-height: 90px;
+    }
+
+    .projects:hover,
+    .rewards:hover {
+        background-color: green;
+        color: white;
+    }
+
+    #xiangmu,
+    #zhengshu {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+
+    .innerbox {
+        width: 100%;
+        height: 400px;
+        background-size: cover;
+        border-radius: 20px;
+        background-position: top center;
+        border: 1px solid #ccc;
+        box-shadow: #ccc 10px 10px 5px;
+    }
+
+    .box {
+        display: inline-block;
+        width: 260px;
+        border-radius: 20px;
+        margin: 10px 4%;
+    }
+
+    .box p {
+        text-align: center;
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    .intro {
+        width: 260px;
+        height: 400px;
+        background: rgba(60, 58, 58, 0.72);
+        filter: alpha(opacity=70);
+        border-radius: 20px;
+        display: none;
+    }
+
+    .box:hover .intro {
+        display: flex;
+    }
+
+    .intro {
+        color: #fff;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .intro p {
+        padding: 0 10px;
+    }
+
+    .title {
+        margin: 20px 0 20px 0;
+        line-height: 50px;
+        margin-left: 5px;
+        font-size: 20px;
+        background-color: #aad2f0;
+        border-radius: 20px;
+        color: #fff;
+        padding: 0 10px;
+    }
+
+    @media screen and (max-width: 670px) {
+
+        .rewards {
+            display: none;
+        }
+        .projects {
+            margin-right: 0;
+        }
+    }
+
+    @media screen and (max-width: 450px) {
+
+        .projects {
+            display: none;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="mypic">
+        </div>
+        <div class="nav">
+            <a class='projects' href="#xiangmu" title="Lorum ipsum dolor sit amet">个人项目</a>
+            <a class='rewards' href="#zhengshu" title="Aliquam tincidunt mauris eu risus">奖项证书</a>
+        </div>
+    </div>
+    <p class="title">个人项目</p>
+    <div id="xiangmu">
+        <div class="box">
+            <a href="http://htmlpreview.github.io/?https://github.com/fenerchen/show/blob/master/demos/loading/opt_loading.html" target="_blank">
+                <div class="innerbox" style="background-image:url(img/loading.gif);">
+                    <div class="intro">
+                        <p>CSS3饼状loading效果</p>
+                        <p>使用HTML和CSS实现半圆和四分之三圆环。</p>
+                        <p>所有的动画元素采用HTML和CSS实现。</p>
+                    </div>
+                </div>
+            </a>
+            <p>CSS3饼状loading效果</p>
+        </div>
+        <div class="box">
+            <a href="http://htmlpreview.github.io/?https://github.com/fenerchen/show/blob/master/demos/3D_rotator/3d_rotator.html" target="_blank">
+                <div class="innerbox" style="background-image:url(img/3D.gif);">
+                    <div class="intro">
+                        <p>3D轮播</p>
+                        <p>使用css3制作3D动态轮播器。</p>
+                    </div>
+                </div>
+            </a>
+            <p>3D轮播</p>
+        </div>
+        <div class="box">
+            <a href="http://htmlpreview.github.io/?https://github.com/fenerchen/show/blob/master/demos/words_animation/w_a.html" target="_blank">
+                <div class="innerbox" style="background-image:url(img/word.gif);;">
+                    <div class="intro">
+                        <p>有趣的鼠标悬浮模糊效果</p>
+                        <p>css3实现文字流光渐变和背景模糊效果</p>
+                    </div>
+                </div>
+            </a>
+            <p>有趣的鼠标悬浮模糊效果</p>
+        </div>
+        <div class="box">
+            <a href="https://codepen.io/fenerchen/pen/aYwYwZ" target="_blank">
+                <div class="innerbox" style="background-image:url(img/instuction.gif);">
+                    <div class="intro">
+                        <p>听指令的小方块</p>
+                        <p>小方块根据指令执行动画</p>
+                        <p>每条指令的执行时间是1s</p>
+                    </div>
+                </div>
+            </a>
+            <p>听指令的小方块</p>
+        </div>
+        <div class="box">
+            <a href="https://codepen.io/fenerchen/pen/KoqRZN" target="_blank">
+                <div class="innerbox" style="background-image:url(img/tree.gif);">
+                    <div class="intro">
+                        <p>JavaScript和树</p>
+                        <p>先生成一棵树</p>
+                        <p>对这个树进行遍历、插入、删除节点等</p>
+                    </div>
+                </div>
+            </a>
+            <p>JavaScript和树</p>
+        </div>
+        <div class="box">
+            <a href="http://htmlpreview.github.io/?https://github.com/fenerchen/show/blob/master/demos/queue/task5.html" target="_blank">
+                <div class="innerbox" style="background-image:url(img/query.gif);background-position: 10px;">
+                    <div class="intro">
+                        <p>队列操作</p>
+                        <p>输入数字，模拟入队出队</p>
+                        <p>对队列进行排序</p>
+                    </div>
+                </div>
+            </a>
+            <p>队列操作</p>
+        </div>
+        <div class="box">
+            <a href="http://htmlpreview.github.io/?https://github.com/fenerchen/show/blob/master/demos/Countdowntimer/Simpletimer.html" target="_blank">
+                <div class="innerbox" style="background-image:url(img/timer.gif);background-size: 330px 350px;">
+                    <div class="intro">
+                        <p>倒计时计时器</p>
+                        <p>自行设计定时时间</p>
+                        <p>启动定时器进入倒计时模式</p>
+                    </div>
+                </div>
+            </a>
+            <p>倒计时计时器</p>
+        </div>
+        <div class="box">
+            <a href="http://htmlpreview.github.io/?https://github.com/fenerchen/baiduife/blob/master/task/xiaoweicollege/task7/task7.html" target="_blank">
+                <div class="innerbox" style="background-image:url(img/page.png);">
+                    <div class="intro">
+                        <p>技术产品官网的页面架构及样式布局</p>
+                        <p>根据PSD实现页面</p>
+                    </div>
+                </div>
+            </a>
+            <p>技术产品官网的页面架构及样式布局</p>
+        </div>
+        <div class="box">
+            <a href="http://htmlpreview.github.io/?https://github.com/fenerchen/imooc/blob/master/firm/firm.html" target="_blank">
+                <div class="innerbox" style="background-image:url(img/mooc.png);">
+                    <div class="intro">
+                        <p>慕课网首页</p>
+                        <p>模拟实现慕课网首页</p>
+                    </div>
+                </div>
+            </a>
+            <p>慕课网首页</p>
+        </div>
+        <div class="box">
+            <a href="http://htmlpreview.github.io/?https://github.com/fenerchen/jqExercise/blob/master/code/shirt.html" target="_blank">
+                <div class="innerbox" style="background-image:url(img/shirt.png);">
+                    <div class="intro">
+                        <p>购物网页</p>
+                        <p>查看商品的信息</p>
+                    </div>
+                </div>
+            </a>
+            <p>购物网页</p>
+        </div>
+    </div>
+    <p class="title">奖项证书</p>
+    <div id="zhengshu">
+        <div class="box">
+            <a href="">
+                <div class="innerbox" style="background-image:url(img/comp3.jpg);">
+                    <div class="intro">
+                        <p>计算机等级四级合格证书</p>
+                    </div>
+                </div>
+            </a>
+            <p>计算机等级四级合格证书</p>
+        </div>
+        <div class="box">
+            <a href="">
+                <div class="innerbox" style="background-image:url(img/comp4.jpg);">
+                    <div class="intro">
+                        <p>计算机等级三级合格证书</p>
+                    </div>
+                </div>
+            </a>
+            <p>计算机等级三级合格证书</p>
+        </div>
+        <div class="box">
+            <a href="">
+                <div class="innerbox" style="background-image:url(img/comp2.jpg);">
+                    <div class="intro">
+                        <p>计算机等级二级合格证书</p>
+                    </div>
+                </div>
+            </a>
+            <p>计算机等级二级合格证书</p>
+        </div>
+        <div class="box">
+            <a href="">
+                <div class="innerbox" style="background-image:url(img/al.jpg);">
+                    <div class="intro">
+                        <p>中兴捧月算法大赛区域优胜奖</p>
+                    </div>
+                </div>
+            </a>
+            <p>中兴捧月算法大赛区域优胜奖</p>
+        </div>
+        <div class="box">
+            <a href="">
+                <div class="innerbox" style="background-image:url(img/math.jpg);">
+                    <div class="intro">
+                        <p>苏北数学建模联赛三等奖</p>
+                    </div>
+                </div>
+            </a>
+            <p>苏北数学建模联赛三等奖</p>
+        </div>
+        <div class="box">
+            <a href="">
+                <div class="innerbox" style="background-image:url(img/ele.jpg);">
+                    <div class="intro">
+                        <p>山东省电子设计竞赛一等奖</p>
+                    </div>
+                </div>
+            </a>
+            <p>山东省电子设计竞赛一等奖</p>
+        </div>
+        <div class="box">
+            <a href="">
+                <div class="innerbox" style="background-image:url(img/ele1.jpg);">
+                    <div class="intro">
+                        <p>电赛TI公司颁发二等奖</p>
+                    </div>
+                </div>
+            </a>
+            <p>电赛TI公司颁发二等奖</p>
+        </div>
+        <div class="box">
+            <a href="">
+                <div class="innerbox" style="background-image:url(img/lan.jpg);">
+                    <div class="intro">
+                        <p>蓝桥杯山东赛区二等奖</p>
+                    </div>
+                </div>
+            </a>
+            <p>蓝桥杯山东赛区二等奖</p>
+        </div>
+    </div>
+</body>
+
+</html>
